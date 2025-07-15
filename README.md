@@ -1,36 +1,32 @@
-Here is a complete README.md in Markdown format for your Learning Management System (LMS) project:
-
-⸻
-
 
 # 📚 Learning Management System (LMS)
 
-A full-featured, role-based LMS built with *ReactJS, **Firebase, and **Razorpay* to support Admin, Teacher, and Student workflows.
+A full-featured, role-based LMS built with **ReactJS**, **Firebase**, and **Razorpay** to support Admin, Teacher, and Student workflows.
 
 ---
 
 ## 🚀 Technologies Used
 
 ### Frontend
-- *ReactJS*
-- *React Router DOM*
-- *Tailwind CSS*
-- *PostCSS* and *Autoprefixer*
+- **ReactJS**
+- **React Router DOM**
+- **Tailwind CSS**
+- **PostCSS** and **Autoprefixer**
 
 ### Backend & Services
-- *Firebase Authentication* – handles login, signup, role assignment
-- *Firebase Firestore* – NoSQL database for storing user data, courses, tests, etc.
-- *Firebase Hosting* (or Vite Dev Server)
-- *Firebase Storage* – for resource files (PDFs, videos)
+- **Firebase Authentication** – handles login, signup, role assignment
+- **Firebase Firestore** – NoSQL database for storing user data, courses, tests, etc.
+- **Firebase Hosting** (or Vite Dev Server)
+- **Firebase Storage** – for resource files (PDFs, videos)
 
 ### Payment Integration
-- *Razorpay* – for processing payments for paid courses
+- **Razorpay** – for processing payments for paid courses
 
 ---
 
 ## 👨‍💼 Features by Role
 
-### 🛠 Admin
+### 🛠️ Admin
 - Dashboard overview of the system
 - Manage users: promote/demote to Teacher/Student
 - Create, edit, and delete courses
@@ -65,9 +61,9 @@ A full-featured, role-based LMS built with *ReactJS, **Firebase, and **Razorpay*
 
 ## 🧠 Routing & Component Logic
 
-- *React Router DOM* handles client-side routing
-- *Protected Routes*: Redirect unauthenticated users
-- *Dynamic Routes*: Course details, test pages, etc.
+- **React Router DOM** handles client-side routing
+- **Protected Routes**: Redirect unauthenticated users
+- **Dynamic Routes**: Course details, test pages, etc.
 - UI updates based on the role stored in Firebase
 
 ---
@@ -90,32 +86,35 @@ tests/
 enrollments/
   userId/
     courseIds[]
+```
 
+---
 
-⸻
+## 💳 Payment Flow (Razorpay)
 
-💳 Payment Flow (Razorpay)
-	1.	Student adds a paid course to cart
-	2.	Razorpay checkout is triggered
-	3.	On success:
-	•	Student is enrolled in the course
-	•	Entry added to Firestore enrollments
-	4.	On failure:
-	•	Razorpay returns error, no enrollment happens
+1. Student adds a **paid course** to cart
+2. Razorpay checkout is triggered
+3. On success:
+   - Student is enrolled in the course
+   - Entry added to Firestore `enrollments`
+4. On failure:
+   - Razorpay returns error, no enrollment happens
 
-⸻
+---
 
-🧪 Test Feature
-	•	Teachers can create quizzes with multiple choice or descriptive questions
-	•	Tests are associated with specific courses
-	•	Students can only access tests for enrolled courses
-	•	Responses stored in Firestore
-	•	Teachers/Admins can review and evaluate
+## 🧪 Test Feature
 
-⸻
+- Teachers can create quizzes with multiple choice or descriptive questions
+- Tests are associated with specific courses
+- Students can only access tests for enrolled courses
+- Responses stored in Firestore
+- Teachers/Admins can review and evaluate
 
-📁 Project Structure (Frontend)
+---
 
+## 📁 Project Structure (Frontend)
+
+```
 /lms
 ├── public/
 │   └── index.html
@@ -136,12 +135,13 @@ enrollments/
 ├── postcss.config.js
 ├── package.json
 └── README.md
+```
 
+---
 
-⸻
+## 🛠️ Setup Instructions
 
-🛠 Setup Instructions
-
+```bash
 # Clone the repository
 git clone https://github.com/your-username/lms-app.git
 cd lms-app
@@ -151,6 +151,4 @@ npm install
 
 # Start the development server
 npm run start
-
-
-⸻
+```
